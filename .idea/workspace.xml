@@ -5,28 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1eed973-6abe-41a1-8659-d9c425928d64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ClientListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/Launcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/LoginApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/LoginFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/Peer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/ClientList.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/LoginPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/img/EChat-logo-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/img/add-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/img/attachment-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/img/emoji-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/img/send-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/GetLocalIP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ReceiveMSG.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/SendMSG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ClientListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ClientListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/LoginFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/Peer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/Peer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/ClientList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/ClientList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/LoginPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +82,9 @@
       <updated>1715766853225</updated>
       <workItem from="1715766854419" duration="331000" />
       <workItem from="1715767205065" duration="5472000" />
-      <workItem from="1715774752975" duration="361000" />
+      <workItem from="1715774752975" duration="7037000" />
+      <workItem from="1715791251496" duration="1123000" />
+      <workItem from="1715792923372" duration="3598000" />
     </task>
     <servers />
   </component>

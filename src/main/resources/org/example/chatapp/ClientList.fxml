@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.layout.HBox?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chatapp.ClientListController">
    <children>
-      <ListView fx:id="ListView" prefHeight="400.0" prefWidth="600.0" />
+      <ListView fx:id="listView" layoutX="-6.0" layoutY="59.0" prefHeight="341.0" prefWidth="606.0" />
+      <HBox alignment="BOTTOM_CENTER" prefHeight="59.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="SearchName" prefHeight="58.0" prefWidth="306.0" promptText="Enter the username of the client you want to message" />
+            <Button fx:id="SerachButton" mnemonicParsing="false" onAction="#SearchButtonOnAction" prefHeight="64.0" prefWidth="111.0" text="Search" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

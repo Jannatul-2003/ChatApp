@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class LoginFormController {
+
     @FXML
     public TextField usernameTextField;
     public void logInButtonOnAction() throws IOException {
@@ -22,7 +23,9 @@ public class LoginFormController {
             alert.setContentText("Please enter your username");
             alert.showAndWait();
         } else {
-
+            String username = usernameTextField.getText();
+            System.out.println("Username in LoginFormController: " + username);
+            Peer peer=new Peer(12346,username);
             FXMLLoader fxmlLoader = new FXMLLoader(LoginFormController.class.getResource("ClientList.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             LoginApplication.stage.setTitle("Client List");

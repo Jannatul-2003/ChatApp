@@ -16,7 +16,7 @@
   </padding>
 
   <!-- Application logo -->
-  <ImageView fitHeight="87.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+  <ImageView fitHeight="102.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
     <image>
       <Image url="@../../img/EChat-logo-img.png" />
     </image>
@@ -35,7 +35,7 @@
   </Label>
 
   <!-- Text field for entering name -->
-  <TextField fx:id="usernameTextField" prefHeight="29.0" prefWidth="286.0" />
+  <TextField fx:id="usernameTextField" prefHeight="29.0" prefWidth="286.0" promptText="Enter Your Name" />
 
   <!-- Login button -->
   <Button layoutY="132.0" onAction="#logInButtonOnAction" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #03a9f4;" text="Sign Up" textFill="WHITE">
