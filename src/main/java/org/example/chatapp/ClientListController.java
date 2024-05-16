@@ -10,12 +10,14 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
 public class ClientListController implements Initializable {
     @FXML
-    public Button SerachButton;
+    public Button SearchButton;
+
     //
 @FXML
 private ListView<String> listView;
@@ -23,13 +25,17 @@ private ListView<String> listView;
     @FXML
     private TextField SearchName;
 
-
-    private ObservableList<String> clients;
-
+@FXML
+    private ObservableList<String> clients= FXCollections.observableArrayList();
+@FXML
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //clients = FXCollections.observableArrayList(Peer.clientMap.keySet());
-        clients= FXCollections.observableArrayList("Client 1", "Client 2", "Client 3", "Client 4", "Client 5");
+        ArrayList<ConnectedUser> users = Peer.getInstance().getOnlineUsers();
+        //clients= FXCollections.observableArrayList("Client 1", "Client 2", "Client 3", "Client 4", "Client 5");
+        for(ConnectedUser user: users)
+        {
+            clients.add(user.getName());
+        }
         listView.setItems(clients);
         listView.getSelectionModel().selectedItemProperty().addListener(this::selectClient);
     }
@@ -52,5 +58,19 @@ private ListView<String> listView;
             listView.setItems(filteredClients);
         }
     }
+    @FXML
+    public void refreshUserList() {
+        //data.removeAll();
+        listView.getItems().clear();
+        ArrayList<ConnectedUser> users = Peer.getInstance().getOnlineUsers();
+        //clients= FXCollections.observableArrayList("Client 1", "Client 2", "Client 3", "Client 4", "Client 5");
+        for(ConnectedUser user: users)
+        {
+            clients.add(user.getName());
+        }
+        listView.setItems(clients);
+        listView.getSelectionModel().selectedItemProperty().addListener(this::selectClient);
+    }
 }
+
 

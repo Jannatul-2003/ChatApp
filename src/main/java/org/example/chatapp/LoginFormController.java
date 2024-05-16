@@ -25,7 +25,12 @@ public class LoginFormController {
         } else {
             String username = usernameTextField.getText();
             System.out.println("Username in LoginFormController: " + username);
-            Peer peer=new Peer(12346,username);
+            CurrentUser.getInstance().setName(username);
+            CurrentUser.getInstance().start();
+           //
+            LoginApplication.stage.close();
+            LoginApplication.stage = new Stage();
+            //
             FXMLLoader fxmlLoader = new FXMLLoader(LoginFormController.class.getResource("ClientList.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             LoginApplication.stage.setTitle("Client List");

@@ -6,14 +6,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chatapp.ClientListController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chatapp.ClientListController">
    <children>
-      <ListView fx:id="listView" layoutX="-6.0" layoutY="59.0" prefHeight="341.0" prefWidth="606.0" />
-      <HBox alignment="BOTTOM_CENTER" prefHeight="59.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="65.0" prefWidth="322.0" style="-fx-background-color: #c6ddf2;">
          <children>
-            <TextField fx:id="SearchName" prefHeight="58.0" prefWidth="306.0" promptText="Enter the username of the client you want to message" />
-            <Button fx:id="SerachButton" mnemonicParsing="false" onAction="#SearchButtonOnAction" prefHeight="64.0" prefWidth="111.0" text="Search" />
+            <TextField fx:id="SearchName" promptText="Search User" />
+            <Button fx:id="SearchButton" mnemonicParsing="false" onAction="#SearchButtonOnAction" text="Search" />
          </children>
       </HBox>
+      <ListView fx:id="listView" layoutX="2.0" layoutY="68.0" prefHeight="324.0" prefWidth="265.0" />
+      <Button layoutX="268.0" layoutY="68.0" mnemonicParsing="false" onAction="#refreshUserList" text="Refresh" />
    </children>
 </AnchorPane>

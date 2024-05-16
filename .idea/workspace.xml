@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1eed973-6abe-41a1-8659-d9c425928d64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/GetLocalIP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ReceiveMSG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/SendMSG.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ConnectedUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/CurrentUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/Chat.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ClientListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ClientListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/LoginFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/Peer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/Peer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/ClientList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/ClientList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/LoginPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/c code/ChatApp/src/main/resources/org/img&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/c code/ChatApp/src/main/resources/org/example/chatapp&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -62,6 +61,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\c code\ChatApp\src\main\resources\org\example\chatapp" />
       <recent name="C:\c code\ChatApp\src\main\resources\org\img" />
     </key>
   </component>
@@ -85,6 +85,11 @@
       <workItem from="1715774752975" duration="7037000" />
       <workItem from="1715791251496" duration="1123000" />
       <workItem from="1715792923372" duration="3598000" />
+      <workItem from="1715796566876" duration="1047000" />
+      <workItem from="1715844869572" duration="1531000" />
+      <workItem from="1715847037511" duration="5308000" />
+      <workItem from="1715855257098" duration="137000" />
+      <workItem from="1715864661261" duration="733000" />
     </task>
     <servers />
   </component>
