@@ -14,6 +14,9 @@ public class ConnectedUser {
         this.id = id;
     }
 
+    public Socket getConnectedSocket() {
+        return connectedSocket;
+    }
     public int getId() {
         return id;
     }

@@ -21,9 +21,10 @@ public class Peer {
         ArrayList<ConnectedUser> users=new ArrayList<ConnectedUser>();
         for(int i=0; i<=255; i++)
         {
-            String ipAddress = "10.42.0."+i;
+            //String ipAddress = "10.42.0."+i;
+            String ipAddress = Objects.requireNonNull(GetLocalIP.getLocalIPAddress()).substring(0, GetLocalIP.getLocalIPAddress().lastIndexOf(".")+1)+i;
             if(ipAddress.equals(GetLocalIP.getLocalIPAddress()))
-                continue;
+              continue;
             Socket socket= new Socket();
             try {
                 socket.connect(new InetSocketAddress(ipAddress, 12345), 10);
