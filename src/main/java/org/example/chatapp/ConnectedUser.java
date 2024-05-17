@@ -17,6 +17,10 @@ public class ConnectedUser {
     public Socket getConnectedSocket() {
         return connectedSocket;
     }
+    public void setConnectedSocket(Socket connectedSocket) {
+        this.connectedSocket = connectedSocket;
+    }
+
     public int getId() {
         return id;
     }

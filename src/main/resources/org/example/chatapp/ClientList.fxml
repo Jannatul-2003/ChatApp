@@ -12,9 +12,10 @@
          <children>
             <TextField fx:id="SearchName" promptText="Search User" />
             <Button fx:id="SearchButton" mnemonicParsing="false" onAction="#SearchButtonOnAction" text="Search" />
+            <Button mnemonicParsing="false" onAction="#refreshUserList" text="Refresh" />
          </children>
       </HBox>
-      <ListView fx:id="listView" layoutX="2.0" layoutY="68.0" prefHeight="324.0" prefWidth="265.0" />
-      <Button layoutX="268.0" layoutY="68.0" mnemonicParsing="false" onAction="#refreshUserList" text="Refresh" />
+      <ListView fx:id="userListView" layoutX="2.0" layoutY="68.0" prefHeight="324.0" prefWidth="265.0" />
+      <Button layoutX="268.0" layoutY="68.0" mnemonicParsing="false" onAction="#sendButtonClick" prefHeight="26.0" prefWidth="56.0" text="Send" />
    </children>
 </AnchorPane>

@@ -10,34 +10,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="pane" prefHeight="528.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chatapp.ChatController">
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chatapp.ChatController">
     <children>
+        <Button layoutX="551.0" layoutY="346.0" mnemonicParsing="false" onAction="#attachedButtonOnAction" prefHeight="27.0" prefWidth="36.0" />
         <!-- ScrollPane for messages -->
-        <ScrollPane fx:id="scrollPain" layoutX="19.0" layoutY="85.0" prefHeight="382.0" prefWidth="518.0">
+        <ScrollPane fx:id="scrollPain" layoutX="7.0" layoutY="81.0" prefHeight="238.0" prefWidth="593.0">
             <content>
-                <VBox fx:id="vBox" prefHeight="391.0" prefWidth="503.0" style="-fx-background-color: #c6ddf2;" />
+                <VBox fx:id="vBox" prefHeight="238.0" prefWidth="587.0" style="-fx-background-color: #c6ddf2;" />
             </content>
         </ScrollPane>
 
         <!-- TextField for message input -->
-        <TextField fx:id="txtMsg" layoutX="17.0" layoutY="480.0" onAction="#txtMsgOnAction" prefHeight="26.0" prefWidth="392.0" promptText="Send Your Message" />
-
-        <!-- Send Button -->
-        <Button layoutX="418.0" layoutY="480.0" onAction="#sendButtonOnAction" prefHeight="26.0" prefWidth="29.0" />
-
-        <!-- Logo -->
-        <ImageView fitHeight="87.0" fitWidth="81.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../img/EChat-logo-img.png" />
-            </image>
-        </ImageView>
-
-        <!-- Chat Application Title -->
-        <Text fill="#0d47a1" layoutX="69.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CSEDU_OneShare" wrappingWidth="124.9033203125">
-            <font>
-                <Font name="Harlow Solid Italic" size="14.0" />
-            </font>
-        </Text>
+        <TextField fx:id="txtMsg" layoutX="7.0" layoutY="318.0" onAction="#txtMsgOnAction" prefHeight="58.0" prefWidth="491.0" promptText="Send Your Message" />
 
         <!-- Client label -->
         <Text fx:id="txtLabel" fill="#2b50c9" layoutX="248.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client">
@@ -45,26 +29,16 @@
                 <Font name="Bell MT Bold" size="20.0" />
             </font>
         </Text>
-
-        <!-- Attachment Button -->
-        <Button layoutX="496.0" layoutY="479.0" onAction="#attachedButtonOnAction" prefHeight="27.0" prefWidth="30.0" />
-
-                                <!-- Emoji Button -->
-        <Button fx:id="emojiButton" contentDisplay="GRAPHIC_ONLY" layoutX="456.0" layoutY="479.0" onAction="#emojiButtonOnAction" prefHeight="26.0" prefWidth="30.0" />
-          <ImageView fitHeight="28.0" fitWidth="26.0" layoutX="420.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true">
-              <image>
-                  <Image url="@../../img/send-icon.png" />
-              </image>
-          </ImageView>
-          <ImageView fitHeight="55.0" fitWidth="30.0" layoutX="456.0" layoutY="478.0" pickOnBounds="true" preserveRatio="true">
-              <image>
-                  <Image url="@../../img/emoji-icon.png" />
-              </image>
-          </ImageView>
-          <ImageView fitHeight="21.0" fitWidth="19.0" layoutX="502.0" layoutY="484.0" pickOnBounds="true" preserveRatio="true">
-              <image>
-                  <Image url="@../../img/attachment-icon.png" />
-              </image>
-          </ImageView>
+      <Button layoutX="508.0" layoutY="346.0" mnemonicParsing="false" onAction="#sendButtonOnAction" prefHeight="27.0" prefWidth="36.0" />
+        <ImageView fx:id="attachedButton" accessibleRole="BUTTON" fitHeight="21.0" fitWidth="19.0" layoutX="560.0" layoutY="350.0" onMouseClicked="#attachedButtonOnAction" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../img/attachment-icon.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="sendButton" accessibleRole="BUTTON" fitHeight="28.0" fitWidth="26.0" layoutX="513.0" layoutY="347.0" onMouseClicked="#sendButtonOnAction" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../img/send-icon.png" />
+            </image>
+        </ImageView>
     </children>
 </AnchorPane>

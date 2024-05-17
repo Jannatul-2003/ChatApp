@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1eed973-6abe-41a1-8659-d9c425928d64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ChatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/EmojiPicker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ReceiveFiles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ClientListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ClientListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ConnectedUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ConnectedUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/CurrentUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/CurrentUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/GetLocalIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/GetLocalIP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/LoginApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/LoginApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/Peer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/Peer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ReceiveMSG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ReceiveMSG.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/Chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/Chat.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/ClientList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/ClientList.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +95,7 @@
       <workItem from="1715855257098" duration="137000" />
       <workItem from="1715864661261" duration="733000" />
       <workItem from="1715866066244" duration="6429000" />
+      <workItem from="1715918523308" duration="7987000" />
     </task>
     <servers />
   </component>

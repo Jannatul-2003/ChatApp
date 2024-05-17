@@ -3,6 +3,7 @@ package org.example.chatapp;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -10,95 +11,70 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
-import java.net.Socket;
+import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
-import java.io.IOException;
-public class ClientListController implements Initializable {
-    @FXML
-    public Button SearchButton;
 
-    //
-@FXML
-private ListView<String> listView;
+public class ClientListController implements Initializable {
+
+    @FXML
+    private ListView<ConnectedUser> userListView;
 
     @FXML
     private TextField SearchName;
 
-@FXML
-    private ObservableList<String> clients= FXCollections.observableArrayList();
-@FXML
-private ArrayList<ConnectedUser> users;
-@FXML
+    @FXML
+    private Button SearchButton;
+
+    private ObservableList<ConnectedUser> users;
+    private ConnectedUser selectedUser;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-    refreshUserList();
-listView.getSelectionModel().selectedItemProperty().addListener(this::selectClient);
-
+        users = FXCollections.observableArrayList(Peer.getInstance().getOnlineUsers());
+        userListView.setItems(users);
+        userListView.getSelectionModel().selectedItemProperty().addListener(this::selectClient);
     }
-    @FXML
 
-    public void selectClient (ObservableValue<? extends String> observable, String oldValue, String newValue) {
-        ObservableList<String> selectedItems = listView.getSelectionModel().getSelectedItems();
-        String getClient = (selectedItems.isEmpty())? "No Selected User" : selectedItems.toString();
-        System.out.println(getClient);
-        if(!getClient.equals("No Selected User"))
-        {
-            for(ConnectedUser user: users)
-            {
-                if(user.getName().equals(getClient))
-                {
-                    System.out.println("Selected User: "+user.getName() + " IP: "+user.getIp());
-                    try {
-                        Socket socket = user.getConnectedSocket();
-                        //
-                        LoginApplication.stage.close();
-                        FXMLLoader fxmlLoader = new FXMLLoader(ChatController.class.getResource("Chat.fxml"));
-                        Scene scene = new Scene(fxmlLoader.load());
-                        ChatController chatController = fxmlLoader.getController();
-                        chatController.setSocket_Label(socket,getClient);
-                        LoginApplication.stage = new Stage();
-                        LoginApplication.stage.setTitle("Chat Window");
-                        LoginApplication.stage.setScene(scene);
-                        LoginApplication.stage.show();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                        System.out.println("Error initializing chat window or starting threads.");
-                    }
-
-
-                }
-            }
+    private void selectClient(ObservableValue<? extends ConnectedUser> observableValue, ConnectedUser oldUser, ConnectedUser newUser) {
+        selectedUser = newUser;
+        if (newUser != null) {
+            System.out.println(newUser.getIp() + newUser.getName());
         }
     }
-@FXML
-    private void SearchButtonOnAction() {
+
+    public void refreshUserList(ActionEvent actionEvent) {
+        userListView.getItems().clear();
+        users = FXCollections.observableArrayList(Peer.getInstance().getOnlineUsers());
+        userListView.setItems(users);
+    }
+
+    public void sendButtonClick(ActionEvent actionEvent) throws IOException, IOException {
+        if (selectedUser != null) {
+            CurrentUser.getInstance().setConnectedOpenuser(selectedUser);
+            LoginApplication.stage.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(ClientListController.class.getResource("Chat.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            ChatController controller = fxmlLoader.getController();
+            controller.setClientName(selectedUser.getName());
+            LoginApplication.stage.setTitle("Chat");
+            LoginApplication.stage.setScene(scene);
+            LoginApplication.stage.show();
+        }
+    }
+
+    @FXML
+    private void SearchButtonOnAction(ActionEvent actionEvent) {
         String searchText = SearchName.getText().toLowerCase();
         if (searchText.isEmpty()) {
-            listView.setItems(clients);
+            userListView.setItems(users);
         } else {
-            ObservableList<String> filteredClients = clients.stream()
-                    .filter(client -> client.toLowerCase().contains(searchText))
+            ObservableList<ConnectedUser> filteredUsers = users.stream()
+                    .filter(user -> user.getName().toLowerCase().contains(searchText))
                     .collect(Collectors.toCollection(FXCollections::observableArrayList));
-            listView.setItems(filteredClients);
+            userListView.setItems(filteredUsers);
         }
-    }
-    @FXML
-    public void refreshUserList() {
-        listView.getItems().clear();
-        users = Peer.getInstance().getOnlineUsers();
-        //clients= FXCollections.observableArrayList("Client 1", "Client 2", "Client 3", "Client 4", "Client 5");
-        for(ConnectedUser user: users)
-        {
-            clients.add(user.getName());
-        }
-        listView.setItems(clients);
-        //listView.getSelectionModel().selectedItemProperty().addListener(this::selectClient);
     }
 }
-
-
