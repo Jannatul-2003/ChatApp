@@ -1,13 +1,13 @@
-package org.example.chatapp;
+package org.example.chatapp.controller;
+import org.example.chatapp.model.CurrentUser;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.FXML;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.example.chatapp.LoginApplication;
 
 import java.io.IOException;
 
@@ -39,7 +39,7 @@ public class LoginFormController {
             LoginApplication.stage.close();
             LoginApplication.stage = new Stage();
             //
-            FXMLLoader fxmlLoader = new FXMLLoader(LoginFormController.class.getResource("ClientList.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(LoginFormController.class.getResource("/org/example/chatapp/ClientList.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             LoginApplication.stage.setTitle("Client List");
             LoginApplication.stage.setScene(scene);

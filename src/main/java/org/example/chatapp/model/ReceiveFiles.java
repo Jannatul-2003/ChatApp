@@ -1,11 +1,12 @@
-package org.example.chatapp;
+package org.example.chatapp.model;
+
 
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.stage.Stage;
+import org.example.chatapp.controller.FileShareRequestController;
 
 import java.io.*;
 import java.net.Socket;
@@ -28,7 +29,7 @@ public class ReceiveFiles implements Runnable {
 
             Platform.runLater(() -> {
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("FileShareRequest.fxml"));
+                fxmlLoader.setLocation(getClass().getResource("/org/example/chatapp/FileShareRequest.fxml"));
 
                 Scene scene = null;
                 try {

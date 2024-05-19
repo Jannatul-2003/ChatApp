@@ -1,4 +1,7 @@
-package org.example.chatapp;
+package org.example.chatapp.model;
+
+import org.example.chatapp.util.GetLocalIP;
+
 import java.io.*;
 import java.net.*;
 import java.util.*;

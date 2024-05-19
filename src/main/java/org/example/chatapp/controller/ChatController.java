@@ -1,4 +1,5 @@
-package org.example.chatapp;
+package org.example.chatapp.controller;
+
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -16,6 +17,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.example.chatapp.model.CurrentUser;
 
 import java.io.*;
 import java.net.InetSocketAddress;

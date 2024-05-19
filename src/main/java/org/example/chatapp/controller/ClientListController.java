@@ -1,4 +1,7 @@
-package org.example.chatapp;
+package org.example.chatapp.controller;
+import org.example.chatapp.model.CurrentUser;
+import org.example.chatapp.model.Peer;
+
 
 import javafx.application.Platform;
 import javafx.beans.value.ObservableValue;
@@ -13,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.example.chatapp.model.ConnectedUser;
 
 import java.io.IOException;
 import java.net.URL;
@@ -60,7 +64,7 @@ public class ClientListController implements Initializable {
             Platform.runLater(() -> {
                 Stage newStage = new Stage();
                 newStage.setTitle("New Chat: " + selectedUser.getIp());
-                FXMLLoader fxmlLoader = new FXMLLoader(ClientListController.class.getResource("Chat.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(ClientListController.class.getResource("/org/example/chatapp/Chat.fxml"));
                 Scene scene = null;
                 try {
                     scene = new Scene(fxmlLoader.load());

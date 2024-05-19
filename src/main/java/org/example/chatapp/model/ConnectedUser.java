@@ -1,5 +1,6 @@
-package org.example.chatapp;
+package org.example.chatapp.model;
 import java.net.Socket;
+
 
 public class ConnectedUser {
     private int id;

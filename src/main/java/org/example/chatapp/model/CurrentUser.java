@@ -1,4 +1,5 @@
-package org.example.chatapp;
+package org.example.chatapp.model;
+import org.example.chatapp.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;

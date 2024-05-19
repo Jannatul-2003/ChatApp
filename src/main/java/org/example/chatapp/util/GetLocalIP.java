@@ -1,4 +1,6 @@
-package org.example.chatapp;
+package org.example.chatapp.util;
+import org.example.chatapp.*;
+
 import java.net.*;
 import java.util.ArrayList;
 import java.util.Enumeration;

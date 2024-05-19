@@ -1,4 +1,4 @@
-package org.example.chatapp;
+package org.example.chatapp.model;
 
 import javafx.application.Platform;
 import javafx.geometry.Insets;
@@ -7,6 +7,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.layout.VBox;
+import org.example.chatapp.LoginApplication;
+
 import java.io.*;
 import java.net.*;
 
