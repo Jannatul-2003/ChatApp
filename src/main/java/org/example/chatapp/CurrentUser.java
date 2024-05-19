@@ -21,13 +21,16 @@ public class CurrentUser {
     {
         this.clientMap = new HashMap<>();
     }
-    private static final int[] PORTS = {25000, 25001, 25002};
+    private static final int[] PORTS = {25000};
     public static synchronized CurrentUser getInstance()
     {
         if (single_instance == null)
             single_instance = new CurrentUser();
 
         return single_instance;
+    }
+    public boolean isInClientMap(String username) {
+        return clientMap.containsKey(username);
     }
 
     public void start() {
@@ -56,15 +59,29 @@ public class CurrentUser {
                 while (true) {
                     Socket clientSocket = serverSocket.accept();
                     System.out.println("Client connected: " + clientSocket.getInetAddress().getHostAddress());
+                    String clientUsername;
                     synchronized (clientMap) {
                         BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-                        String clientUsername = in.readLine();
-                        clientMap.put(clientUsername, clientSocket.getInetAddress().getHostAddress());
+                        clientUsername = in.readLine();
+                        if(!clientUsername.startsWith("$FILE$")){
+                            clientMap.put(clientUsername, clientSocket.getInetAddress().getHostAddress());
+                            PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+                            out.println(name);
+                        }
+                    }
+                    if(clientUsername.startsWith("$FILE$")){
                         PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
                         out.println(name);
+                        Thread fileReceiveThread = new Thread(new ReceiveFiles(clientSocket));
+                        fileReceiveThread.start();
                     }
-                    Thread fileReceiveThread = new Thread(new ReceiveFiles(clientSocket));
-                    fileReceiveThread.start();
+                    else{
+                        Thread msgReceiveThread = new Thread(new ReceiveMSG(clientSocket, clientUsername));
+                        msgReceiveThread.start();
+                    }
+
+
+
                 }
             } catch (IOException e) {
                 e.printStackTrace();

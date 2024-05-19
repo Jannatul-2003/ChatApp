@@ -4,42 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1eed973-6abe-41a1-8659-d9c425928d64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ReceiveFiles.java" afterDir="false" />
+    <list default="true" id="3e56748a-8122-4df8-a4b1-63155d8c8f95" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/css/Chat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/css/ClientList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/css/Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/img/LoginPageWallpaper.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/received_file.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ClientListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ClientListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ConnectedUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ConnectedUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/CurrentUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/CurrentUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/GetLocalIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/GetLocalIP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/LoginApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/LoginApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/LoginFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/Peer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/Peer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ReceiveFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ReceiveFiles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ReceiveMSG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/chatapp/ReceiveMSG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/Chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/Chat.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/Chat.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/ClientList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/ClientList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/chatapp/LoginPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="FxmlFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 1
+  &quot;associatedIndex&quot;: 5
 }</component>
-  <component name="ProjectId" id="2gUzH5VrwRjLTZ1lDLDtOkIel6K" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectId" id="2geigilG7wqLzhfE7ZehR3Jlej7" />
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -49,12 +53,11 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LoginApplication.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/c code/ChatApp/src/main/resources/org/example/chatapp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Downloads/ChatApp - 1.08/ChatApp - Copy/src/main/resources/org/img&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -65,37 +68,46 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\c code\ChatApp\src\main\resources\org\example\chatapp" />
-      <recent name="C:\c code\ChatApp\src\main\resources\org\img" />
+      <recent name="C:\Users\DELL\Downloads\ChatApp - 1.08\ChatApp - Copy\src\main\resources\org\img" />
+      <recent name="C:\Users\DELL\Downloads\ChatApp - 1.08\ChatApp - Copy\src\main\resources\org\css" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ChatApp - Copy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ChatApp - Copy" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-f644763e9732-c0c073db" />
+        <option value="jdk-22-openjdk-22-f644763e9732-8c5c9ae5" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a1eed973-6abe-41a1-8659-d9c425928d64" name="Changes" comment="" />
-      <created>1715766853225</created>
+      <changelist id="3e56748a-8122-4df8-a4b1-63155d8c8f95" name="Changes" comment="" />
+      <created>1716064556747</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1715766853225</updated>
-      <workItem from="1715766854419" duration="331000" />
-      <workItem from="1715767205065" duration="5472000" />
-      <workItem from="1715774752975" duration="7037000" />
-      <workItem from="1715791251496" duration="1123000" />
-      <workItem from="1715792923372" duration="3598000" />
-      <workItem from="1715796566876" duration="1047000" />
-      <workItem from="1715844869572" duration="1531000" />
-      <workItem from="1715847037511" duration="5308000" />
-      <workItem from="1715855257098" duration="137000" />
-      <workItem from="1715864661261" duration="733000" />
-      <workItem from="1715866066244" duration="6429000" />
-      <workItem from="1715918523308" duration="7987000" />
+      <updated>1716064556747</updated>
+      <workItem from="1716064557957" duration="2982000" />
+      <workItem from="1716068108120" duration="346000" />
+      <workItem from="1716069186333" duration="557000" />
+      <workItem from="1716069883672" duration="1225000" />
+      <workItem from="1716086182079" duration="477000" />
+      <workItem from="1716092626202" duration="2398000" />
     </task>
     <servers />
   </component>

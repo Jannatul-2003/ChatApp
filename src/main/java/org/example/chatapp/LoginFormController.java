@@ -22,7 +22,15 @@ public class LoginFormController {
             alert.setHeaderText("Error");
             alert.setContentText("Please enter your username");
             alert.showAndWait();
-        } else {
+        }
+        else if(CurrentUser.getInstance().isInClientMap(usernameTextField.getText())){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Error");
+            alert.setContentText("Username already exists");
+            alert.showAndWait();
+        }
+        else {
             String username = usernameTextField.getText();
             System.out.println("Username in LoginFormController: " + username);
             CurrentUser.getInstance().setName(username);

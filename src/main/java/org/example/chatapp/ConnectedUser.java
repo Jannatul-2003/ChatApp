@@ -6,12 +6,14 @@ public class ConnectedUser {
     private String name;
     private String ip;
     private Socket connectedSocket;
+    private int port;
 
-    public ConnectedUser(Socket connectedSocket, String ip, String name, int id) {
-        this.connectedSocket = connectedSocket;
-        this.ip = ip;
-        this.name = name;
+    public ConnectedUser(int id, String name, String ip, Socket connectedSocket, int port) {
         this.id = id;
+        this.name = name;
+        this.ip = ip;
+        this.connectedSocket = connectedSocket;
+        this.port = port;
     }
 
     public Socket getConnectedSocket() {
@@ -49,5 +51,13 @@ public class ConnectedUser {
     public String toString() {
         return name;
 
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
     }
 }

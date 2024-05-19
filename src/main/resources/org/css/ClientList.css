@@ -1,0 +1,30 @@
+.hbox {
+    -fx-background-image: url("../img/LoginPageWallpaper.jpg");
+    -fx-spacing: 10;
+    -fx-padding: 10;
+}
+
+.text-field {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background, -30%);
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+}
+.vbox {
+    -fx-background-image: url("../img/LoginPageWallpaper.jpg");
+}
+
+.button.send-button {
+    -fx-background-color: #28a745;
+}
+
+.list-view {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}

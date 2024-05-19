@@ -1,5 +1,6 @@
 package org.example.chatapp;
 
+import javafx.application.Platform;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -54,14 +56,23 @@ public class ClientListController implements Initializable {
     public void sendButtonClick(ActionEvent actionEvent) throws IOException, IOException {
         if (selectedUser != null) {
             CurrentUser.getInstance().setConnectedOpenuser(selectedUser);
-            LoginApplication.stage.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(ClientListController.class.getResource("Chat.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            ChatController controller = fxmlLoader.getController();
-            controller.setClientName(selectedUser.getName());
-            LoginApplication.stage.setTitle("Chat");
-            LoginApplication.stage.setScene(scene);
-            LoginApplication.stage.show();
+            //LoginApplication.stage.close();
+            Platform.runLater(() -> {
+                Stage newStage = new Stage();
+                newStage.setTitle("New Chat: " + selectedUser.getIp());
+                FXMLLoader fxmlLoader = new FXMLLoader(ClientListController.class.getResource("Chat.fxml"));
+                Scene scene = null;
+                try {
+                    scene = new Scene(fxmlLoader.load());
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                ChatController controller = fxmlLoader.getController();
+                controller.setClientName(selectedUser.getName());
+                controller.setSocket(selectedUser.getConnectedSocket());
+                newStage.setScene(scene);
+                newStage.show();
+            });
         }
     }
 

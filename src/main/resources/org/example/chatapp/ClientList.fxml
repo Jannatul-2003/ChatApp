@@ -1,21 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chatapp.ClientListController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="325.0" stylesheets="@../../css/ClientList.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chatapp.ClientListController">
    <children>
-      <HBox alignment="CENTER" prefHeight="65.0" prefWidth="322.0" style="-fx-background-color: #c6ddf2;">
+      <HBox alignment="CENTER" prefHeight="66.0" prefWidth="325.0" styleClass="hbox">
          <children>
-            <TextField fx:id="SearchName" promptText="Search User" />
-            <Button fx:id="SearchButton" mnemonicParsing="false" onAction="#SearchButtonOnAction" text="Search" />
-            <Button mnemonicParsing="false" onAction="#refreshUserList" text="Refresh" />
+            <TextField fx:id="SearchName" promptText="Search User" styleClass="text-field">
+               <font>
+                  <Font name="Gabriola" size="14.0" />
+               </font></TextField>
+            <Button fx:id="SearchButton" mnemonicParsing="false" onAction="#SearchButtonOnAction" styleClass="button" text="Search">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Georgia" size="12.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#refreshUserList" styleClass="button" text="Refresh">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Georgia" size="12.0" />
+               </font></Button>
          </children>
       </HBox>
-      <ListView fx:id="userListView" layoutX="2.0" layoutY="68.0" prefHeight="324.0" prefWidth="265.0" />
-      <Button layoutX="268.0" layoutY="68.0" mnemonicParsing="false" onAction="#sendButtonClick" prefHeight="26.0" prefWidth="56.0" text="Send" />
+      <ListView fx:id="userListView" layoutX="3.0" layoutY="66.0" prefHeight="324.0" prefWidth="265.0" styleClass="list-view">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></ListView>
+      <VBox alignment="TOP_CENTER" layoutX="270.0" layoutY="66.0" prefHeight="324.0" prefWidth="56.0" styleClass="vbox">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#sendButtonClick" prefHeight="26.0" prefWidth="50.0" styleClass="button send-button" text="Select">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Georgia" size="12.0" />
+               </font></Button>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

@@ -1,0 +1,17 @@
+.anchor-pane {
+    -fx-background-image: url("../img/LoginPageWallpaper.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+
+
+.message-input {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #c6ddf2;
+    -fx-border-radius: 10;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+}
+

@@ -1,0 +1,4 @@
+.vbox {
+    -fx-background-image: url("../img/LoginPageWallpaper.jpg");
+    -fx-background-size: cover;
+}

@@ -1,46 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="420.0" prefWidth="464.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chatapp.LoginFormController">
+<VBox alignment="CENTER" prefHeight="420.0" prefWidth="464.0" spacing="20.0" styleClass="vbox" stylesheets="@../../css/Login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chatapp.LoginFormController">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
 
   <!-- Application logo -->
-  <ImageView fitHeight="102.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
+  <ImageView blendMode="SRC_ATOP" fitHeight="101.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true">
     <image>
       <Image url="@../../img/EChat-logo-img.png" />
     </image>
   </ImageView>
-  <Text fill="#0d47a1" strokeType="OUTSIDE" strokeWidth="0.0" text="CSEDU_OneShare">
+  <Text fill="#d4e5ff" strokeType="OUTSIDE" strokeWidth="0.0" text="CSEDU_OneShare">
     <font>
-      <Font name="Harlow Solid Italic" size="14.0" />
+      <Font name="Georgia" size="18.0" />
     </font>
   </Text>
 
   <!-- Label for the text field -->
-  <Label text="Nick Name:" textFill="#0d47a1">
+  <Label text="Nick Name:" textFill="#8dbaff">
     <font>
-      <Font name="System Bold" size="14.0" />
+      <Font name="Georgia Bold" size="14.0" />
     </font>
   </Label>
 
   <!-- Text field for entering name -->
-  <TextField fx:id="usernameTextField" prefHeight="29.0" prefWidth="286.0" promptText="Enter Your Name" />
+  <TextField fx:id="usernameTextField" prefHeight="29.0" prefWidth="286.0" promptText="Enter Your Name">
+    <font>
+      <Font name="Gabriola" size="21.0" />
+    </font></TextField>
 
   <!-- Login button -->
   <Button layoutY="132.0" onAction="#logInButtonOnAction" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #03a9f4;" text="Sign Up" textFill="WHITE">
     <font>
-      <Font name="System Bold" size="14.0" />
+      <Font name="Georgia Bold" size="14.0" />
     </font>
+    <cursor>
+      <Cursor fx:constant="HAND" />
+    </cursor>
+    <effect>
+      <Blend />
+    </effect>
   </Button>
 </VBox>
